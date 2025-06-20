@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       locale: DevicePreview.locale(context),
       title: 'Device Preview Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      theme: ThemeData().copyWith(
+        scaffoldBackgroundColor: const Color(0xff100B20),
       ),
       home: SplashView(),
     );
