@@ -1,3 +1,4 @@
+import 'package:booklyapp/constants.dart';
 import 'package:booklyapp/features/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
@@ -17,10 +18,8 @@ class MyApp extends StatelessWidget {
       useInheritedMediaQuery: true,
       builder: DevicePreview.appBuilder,
       locale: DevicePreview.locale(context),
-      title: 'Device Preview Demo',
-      theme: ThemeData().copyWith(
-        scaffoldBackgroundColor: const Color(0xff100B20),
-      ),
+
+      theme: ThemeData().copyWith(scaffoldBackgroundColor: KprimaryColor),
       home: SplashView(),
     );
   }
