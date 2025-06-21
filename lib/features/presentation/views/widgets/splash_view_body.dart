@@ -1,6 +1,8 @@
 import 'package:booklyapp/core/asset_date.dart';
+import 'package:booklyapp/features/presentation/views/views/views_model/home_view.dart';
 import 'package:booklyapp/features/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -18,6 +20,12 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initState() {
     super.initState();
 
+    initSlidingAnimation(); // ✅ مهم جدًا
+
+    navigateToHome();
+  }
+
+  void initSlidingAnimation() {
     animationController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 1),
@@ -47,4 +55,14 @@ class _SplashViewBodyState extends State<SplashViewBody>
       ],
     );
   }
+}
+
+void navigateToHome() {
+  Future.delayed(const Duration(seconds: 2), () {
+    Get.to(
+      HomeView(),
+      transition: Transition.fade,
+      duration: const Duration(seconds: 1),
+    );
+  });
 }
