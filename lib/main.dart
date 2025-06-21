@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       locale: DevicePreview.locale(context),
 
-      theme: ThemeData().copyWith(scaffoldBackgroundColor: KprimaryColor),
+      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: KprimaryColor),
       home: SplashView(),
     );
   }

@@ -1,4 +1,4 @@
 class AssetDate {
   static const logo =
-      "C:UsersmostaDownloadsChatGPT Image 21 يونيو 2025، 02_54_09 ص.png";
+      "assets/images/ChatGPT Image 21 يونيو 2025، 02_54_09 ص (1).png";
 }
